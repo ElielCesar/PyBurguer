@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!--Aqui vem o título de cada página-->
+{% block title %} PyBurguer {% endblock %}
+
+<!--Aqui vem todo o conteúdo do meu body-->
+{% block navbar %} 
+
+    {% include 'fragments/navbar.html' %}
+    
+{% endblock %}
+
+
+
+<!--Aqui vem todo o conteúdo do meu body-->
+{% block main %}
+<div class="container">
+    <div class="card mx-auto my-2 bg-dark border-0" style="width: 25rem;">
+        <img class="card-img-top" src="{{item.imagem.url}}" style="width: 80%; margin:auto">
+        <div class="card-body">
+        <h5 class="card-title text-white">{{item.nome}}</h5>
+        <p class="card-text mb-1 text-white">{{item.descricao}}</p>
+        <p class="card-text mb-5 fs-3 fw-bolder text-warning text-end">R${{item.preco}}</p>
+        <a href="#" class="btn btn-warning w-100 my-1 " style="margin: auto; bottom: 0; position: absolute;">Confirmar</a>
+        </div>
+    </div>
+</div>
+
+    
+
+{% endblock %}
+
+
+
+

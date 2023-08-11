@@ -9,8 +9,6 @@
 
     {% include 'fragments/navbar.html' %}
 
-    {% include 'fragments/banner.html'%}
-
 {% endblock %}
 
 
@@ -18,7 +16,10 @@
 <!--Aqui vem todo o conteúdo do meu body-->
 {% block main %}
     
+    {% include 'fragments/banner.html'%}
 
+    {% include 'fragments/lista_produtos.html'%}
+    
 {% endblock %}
 
 
